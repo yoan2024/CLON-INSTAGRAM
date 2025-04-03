@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.layout {
+  @apply w-screen   flex flex-col  max-sm:w-full;
+}
+
+.layout-icon-tresrayas {
+  @apply flex-1   md:hidden  flex flex-row   justify-center items-center ml-60;
+}
+
+.layout-icon-message {
+  @apply flex flex-row items-center;
+}
+
+.lista-nav {
+  @apply text-gray-700 flex  flex-row justify-center items-center gap-10  max-md:hidden;
+}
+
+.layout-navegation {
+  @apply flex flex-row justify-around  border-b-2 border-solid border-transparent transition-colors duration-75 ease-in-out   h-[130px] overflow-hidden fixed top-0 w-full;
+}
+
+.items-nav {
+  @apply font-semibold text-black  sm:text-lg lg:text-xl   hover:border-b-4 hover:border-solid hover:border-blue-600 p-1;
+}
+
+.flecha {
+  @apply text-xs;
+}
