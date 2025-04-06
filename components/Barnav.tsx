@@ -1,11 +1,31 @@
 "use client";
-
-import React, { useEffect } from "react";
+import Tarjeta from "./Tarjetaa";
 import Image from "next/image";
 import { useState } from "react";
+import { useEffect } from "react";
+
+const textoCartasFunciones = [
+  {
+    titulo: "Util",
+    parrafo:
+      "Con esta herramienta de conexion para todos los dias, tu familia y tus amigos sabran que estas presente",
+  },
+  {
+    titulo: "Funciones sociales",
+    parrafo:
+      "Crea que una comunidad con personas con las que compartes pasiones e intereses",
+  },
+  {
+    titulo: "Expresivo",
+    parrafo:
+      "Deja que tu personalidad brille y expresate mas alla de lo que permiten las palabras",
+  },
+];
 
 export function Navegation() {
   const [opacity, setOpacity] = useState(0);
+
+  const isCard = false;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,51 +39,57 @@ export function Navegation() {
   }, []);
 
   return (
-    <nav className="navegation ">
-      <div
+    <>
+      <nav
         className="layout-navegation"
         style={{
-          borderBottom: `2px solid rgba(127, 140, 141, ${opacity})`,
-          backgroundColor: "white",
+          borderColor: `rgba(169, 169, 169, ${opacity} ) 
+`,
         }}
       >
-        <div className="layout-icon-message">
-          <a href="https://www.messenger.com/">
-            <span>
-              <Image
-                src="/image/R.png"
-                width={100}
-                height={100}
-                alt="icon"
-                className="icon-message"
-              />
-            </span>
-          </a>
+        <div className="layout-items-nav ">
+          <div className="image-messenger ">
+            <Image src={"/image/R.png"} width={80} height={80} alt="message" />
+          </div>
+          <ul className="lista-nav">
+            <li className="textNav">
+              funciones<span className="triangle">▼</span>{" "}
+            </li>
+            <li className="textNav">Privacidad y seguridad</li>
+            <li className="textNav">app para computadoras</li>
+            <li className="textNav">para desarrolladores</li>
+            <li className="textNav">servicio de ayuda</li>
+          </ul>
+          <div className="image-tresrayas">
+            <Image
+              src={"/image/tresrayas.png"}
+              width={60}
+              height={60}
+              alt="message"
+            />
+          </div>
         </div>
-        <ol className="lista-nav">
-          <li className="items-nav  flex flex-row items-center gap-2">
-            Funciones <span className="flecha">▼</span>
-          </li>
-          <li className="items-nav">Privacidad y seguridad</li>
-          <li className="items-nav">App para computadoras</li>
-          <li className="items-nav ">Para desarrolladores</li>
-          <li className="items-nav">Servicio de ayuda</li>
-        </ol>
-        <div className="layout-icon-tresrayas">
-          <a href="https://www.messenger.com/">
-            <span className="icon-tresrayas">
-              <Image
-                src="/image/tresrayas.png"
-                width={60}
-                height={40}
-                alt="icon"
-                className="icon-tresrayas"
-              />
-            </span>
-          </a>
+      </nav>
+      {isCard && (
+        <div className="layout-cartas-nav">
+          <div className="layout-items-cartas">
+            <Tarjeta
+              titulo={textoCartasFunciones[0].titulo}
+              parrafo={textoCartasFunciones[0].parrafo}
+            />
+
+            <Tarjeta
+              titulo={textoCartasFunciones[1].titulo}
+              parrafo={textoCartasFunciones[1].parrafo}
+            />
+            <Tarjeta
+              titulo={textoCartasFunciones[2].titulo}
+              parrafo={textoCartasFunciones[2].parrafo}
+            />
+          </div>
         </div>
-      </div>
-    </nav>
+      )}
+    </>
   );
 }
 

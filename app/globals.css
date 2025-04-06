@@ -2,30 +2,152 @@
 @tailwind components;
 @tailwind utilities;
 
-.layout {
-  @apply w-screen   flex flex-col  max-sm:w-full;
+* {
+  box-sizing: content-box;
 }
 
-.layout-icon-tresrayas {
-  @apply flex-1   md:hidden  flex flex-row   justify-center items-center ml-60;
-}
-
-.layout-icon-message {
-  @apply flex flex-row items-center;
-}
-
-.lista-nav {
-  @apply text-gray-700 flex  flex-row justify-center items-center gap-10  max-md:hidden;
-}
+/*ACA PONIENDO LAYOUT DEL PRIMER DIV DE NAV IMPORTANT!*/
 
 .layout-navegation {
-  @apply flex flex-row justify-around  border-b-2 border-solid border-transparent transition-colors duration-75 ease-in-out   h-[130px] overflow-hidden fixed top-0 w-full;
+  @apply fixed top-0 left-0  w-full bg-white   flex justify-center z-50 border-b-2 border-b-transparent;
 }
 
-.items-nav {
-  @apply font-semibold text-black  sm:text-lg lg:text-xl   hover:border-b-4 hover:border-solid hover:border-blue-600 p-1;
+.layout-items-nav {
+  @apply flex-row flex justify-between  max-w-7xl    sm:w-full items-center max-sm:w-screen py-4;
 }
 
-.flecha {
-  @apply text-xs;
+/*DANDOLE UN ANCHO DEFINITIVO ALA IMAGEN DE MESSENGER Y TRESRAYAS*/
+
+.image-messenger {
+  @apply min-w-[70px];
+}
+
+.image-tresrayas {
+  @apply min-w-[70px] hidden max-sm:flex;
+}
+
+/*DANDOLE ESTILO ALOS ITEMS DE NAV DE LA CABECERA*/
+
+.textNav {
+  @apply text-base font-semibold max-sm:hidden hover:border-primary-blue border-b-4 border-transparent cursor-pointer border-solid p-2;
+}
+
+.triangle {
+  @apply ml-1 text-sm;
+}
+
+/*DANDO LAYOUT ALA LISTA DE NAV Y RESPONSIVE A LA LISTA Y A IMAGEE MESSENGER*/
+
+.lista-nav {
+  @apply gap-7 grow shrink max-w-5xl py-2 flex flex-row justify-end;
+}
+.image-messenger {
+  @apply grow shrink;
+}
+/*ACA PONIENDO LAYOUT DELAS CARTAS DE NAV QUE ES FUNCIONES IMPORTANT!*/
+
+.layout-cartas-nav {
+  @apply fixed top-28 left-0  w-full bg-white shadow-md px-5 flex justify-center;
+}
+
+.layout-items-cartas {
+  @apply flex flex-row justify-between gap-6   max-w-7xl    py-9;
+}
+.cartaFuncion {
+  @apply w-96 h-52 rounded-3xl bg-blue-50 opacity-80   flex flex-col justify-around px-4 py-6;
+}
+
+.tituloCarta {
+  @apply font-semibold  text-3xl;
+}
+
+.parrafoCarta {
+  @apply font-normal  text-xl font-sans;
+}
+
+/*DANDOLE LAYOUT AL MAIN PRINCIPAL IMPORTANT!*/
+
+.layout-main {
+  @apply w-full bg-white shadow-md   flex flex-row  justify-center;
+}
+
+.layout-items-main {
+  @apply max-w-7xl gap-6   max-lg:w-screen  flex flex-row mt-28 shrink max-lg:flex-col  max-lg:items-center py-9;
+}
+
+.sectionMain {
+  @apply w-6/12 max-lg:w-9/12  flex flex-col  gap-2 px-4;
+}
+
+/*DANDO ESTILO AL SECTION DE LA DERECHA DEL MAIN*/
+
+/*dando estilo al titulo main*/
+.tituloMain {
+  @apply font-bold text-7xl max-md:hidden max-lg:text-5xl max-lg:flex max-lg:flex-col max-lg:items-center text-center;
+}
+
+.tituloMain {
+  color: #0866ff;
+  font-family: sans-serif;
+}
+
+/*dando estilo al parrafo main*/
+
+.parrafoMain {
+  @apply text-xl font-sans opacity-60  max-md:text-lg  max-md:font-normal  font-semibold mt-7 max-lg:text-center;
+}
+
+/*dandole estilo al formulario de home*/
+
+.layout-form {
+  @apply mt-4;
+}
+
+.layout-items-form {
+  @apply w-3/4 max-lg:w-full;
+}
+
+.item-input-home {
+  @apply rounded-xl text-facebookGray    font-facebook border-none mt-2 w-4/6 max-lg:w-full p-0 py-1 pl-1 bg-bgInputHome;
+}
+
+/*dandole layout al parrafo y button del form de home*/
+
+.layout-form-botton-parrafo-home {
+  @apply flex flex-row  gap-6  items-center mt-6;
+}
+
+/*dandole estilo al botton y al parrafo del form*/
+
+.item-form-botton-home {
+  @apply bg-blue-600 rounded-3xl w-36 max-sm:w-28 text-white font-bold text-xl max-md:h-6 py-1;
+}
+.item-form-parrafo-home {
+  @apply text-blue-700  text-base font-semibold max-sm:text-xs;
+}
+
+/*dandole estilo al checked del form de home*/
+
+.layout-checked-label-home {
+  @apply flex flex-row mt-5 items-center gap-3;
+}
+
+.item-checked-home {
+  @apply border-gray-400;
+}
+
+.item-label-home {
+  @apply font-facebook font-medium text-facebookGray;
+}
+
+/*DANDO ESTILO ALA IMAGEN DE APP STORE*/
+
+.img-app-store {
+  @apply mt-5 ml-2 w-fit;
+}
+
+/*DANDOLE DISEÑO O LAYOUT ALA IMAGEN DE SECTION DE PAGINA HOME*/
+
+.section-right {
+  @apply relative;
 }

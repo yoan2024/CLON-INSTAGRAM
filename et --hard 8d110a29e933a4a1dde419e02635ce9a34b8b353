@@ -1,0 +1,11 @@
+[33mcommit 68915ad1d7c114eaad87e4de4ce4b044b1dce7a2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Yoan Sebastian <yoansebastianramirezgarcia@gmail.com>
+Date:   Fri Apr 4 13:31:09 2025 -0500
+
+    feat(nav): mostrar cartas al hacer click en 'Funciones'
+
+[33mcommit 8d110a29e933a4a1dde419e02635ce9a34b8b353[m
+Author: Yoan Sebastian <yoansebastianramirezgarcia@gmail.com>
+Date:   Thu Apr 3 15:40:41 2025 -0500
+
+    Implemented navigation bar with responsive design
