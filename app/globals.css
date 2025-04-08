@@ -9,7 +9,7 @@
 /*ACA PONIENDO LAYOUT DEL PRIMER DIV DE NAV IMPORTANT!*/
 
 .layout-navegation {
-  @apply fixed top-0 left-0  w-full bg-white   flex justify-center z-50 border-b-2 border-b-transparent;
+  @apply fixed top-0 left-0  w-full bg-white/95 flex justify-center z-50 border-b-2 border-b-transparent;
 }
 
 .layout-items-nav {
@@ -68,7 +68,7 @@
 /*DANDOLE LAYOUT AL MAIN PRINCIPAL IMPORTANT!*/
 
 .layout-main {
-  @apply w-full bg-white shadow-md   flex flex-row  justify-center;
+  @apply w-full bg-white   flex flex-row  justify-center;
 }
 
 .layout-items-main {
@@ -146,8 +146,48 @@
   @apply mt-5 ml-2 w-fit;
 }
 
-/*DANDOLE DISEÑO O LAYOUT ALA IMAGEN DE SECTION DE PAGINA HOME*/
+/*DANDOLE DISEÑO O LAYOUT ALA IMAGEN DE SECTION DE PAGINA HOME IMPORTANT!*/
 
 .section-right {
   @apply relative;
+}
+
+/*DANDOLE LAYOUT AL FOOTER IMPORTANT!*/
+
+.layout-footer {
+  @apply w-full flex flex-row justify-center items-center max-lg:py-2;
+}
+
+.layout-items-footer {
+  @apply flex-row flex max-lg:flex-col justify-between items-center text-center  max-w-5xl sm:w-full  max-sm:w-screen py-8;
+}
+
+/*dondole layout ala lista de footer*/
+
+.layout-lista-footer {
+  @apply flex flex-row justify-center gap-6 flex-wrap  max-lg:py-16 font-sans;
+}
+
+/*danlo flex alos itesm hijos delos hijos de footer*/
+
+.item-footer {
+  @apply flex flex-row gap-6;
+}
+
+/*dndole estilo al logo footer*/
+
+.logo-footer {
+  @apply flex flex-row text-center gap-1;
+}
+
+.anillo {
+  @apply h-5 m-auto text-center;
+}
+
+.Meta {
+  @apply font-medium text-2xl text-primary-blue;
+}
+
+.from-footer {
+  @apply text-facebookGray m-auto;
 }

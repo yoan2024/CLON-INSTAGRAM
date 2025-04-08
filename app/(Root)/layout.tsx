@@ -1,4 +1,5 @@
 import Navegation from "@/components/Barnav";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
@@ -9,6 +10,7 @@ export default function RootLayout({
     <div>
       <Navegation />
       {children}
+      <Footer />
     </div>
   );
 }

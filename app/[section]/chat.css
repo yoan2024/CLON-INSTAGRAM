@@ -1,0 +1,66 @@
+/*DANDOLE LAYOUT AL DIV PRINCIPAL QUE CONTIENE PRACTICAMENTE TODO IMPORTANT!*/
+
+.chat-layout {
+  @apply h-screen flex flex-row justify-center;
+}
+
+/*DANDO LAYOUT ALOS ITEMS IMPORTAN!*/
+
+.chat-layout-items {
+  @apply /*bg-slate-400*/ flex-row max-w-7xl pb-2;
+}
+
+/*DANDOLE LAYOUT AL ASIDEBAR IMPORTANT!*/
+
+.chat-asidebar-item {
+  @apply /*bg-slate-500*/ px-4 flex flex-col  h-full justify-between;
+}
+
+/* layout iconos de chat dela isquierdad primeros*/
+
+.chat-asidebar-layout-primeros {
+  @apply mt-5 flex flex-col items-start;
+}
+
+/*dandole estilo al div papa de img de primeros icons, dandole medidas y centrando la imagen*/
+
+.chat-asidebar-item-icon {
+  @apply hover:bg-neutral-300 gap-2 flex flex-row w-full px-1 py-2 justify-start items-center rounded-lg my-[0.5px] cursor-pointer;
+}
+
+/*imagenes de de div delos primeros icons */
+
+.chat-asidebar-imagen-icon {
+  @apply w-5 h-5;
+}
+
+/*dandole estilo al div papa de img de segundos icons, dandole medidas y centrando la imagen*/
+
+.chat-asidebar-layout-segundos {
+  @apply flex flex-row justify-between items-center gap-2 w-96;
+}
+
+/*dando estilo ala img de perfil de icon, del  segundo div de icons de asidebar*/
+
+.chat-asidebar-imagen-icon-perfil {
+  @apply flex flex-row items-center gap-3  px-1 py-2 hover:bg-neutral-200 cursor-pointer rounded-lg w-full;
+}
+
+/*redondeando la imagen del asidebar*/
+.chat-asidebar-rounde-image {
+  @apply rounded-full overflow-hidden w-8 h-8;
+}
+
+.chat-asidebar-imagen-perfil {
+  @apply w-full h-full object-cover;
+}
+
+/*dando estilo ala img de desplasar, del  segundo div de icons de asidebar*/
+
+.chat-asidebar-imagen-icon-desplasar {
+  @apply flex flex-row rounded-full justify-center items-center hover:bg-neutral-200 w-9 h-9 cursor-pointer;
+}
+
+.chat-asidebar-imagen-desplasar {
+  @apply w-5 h-5;
+}
