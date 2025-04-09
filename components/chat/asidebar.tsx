@@ -8,7 +8,7 @@ function Asidebar() {
               src="./image/icons-chat/conversation.png"
               className="chat-asidebar-imagen-icon"
             />
-            <div>Chats</div>
+            {/*<div>Chats</div>*/}
           </div>
 
           {/**/}
@@ -18,7 +18,7 @@ function Asidebar() {
               src="./image/icons-chat/markeplace.png"
               className="chat-asidebar-imagen-icon"
             />
-            <div>Marketplace</div>
+            {/*<div>Marketplace</div>*/}
           </div>
 
           <div className="chat-asidebar-item-icon">
@@ -26,7 +26,7 @@ function Asidebar() {
               src="./image/icons-chat/solicitudes.png"
               className="chat-asidebar-imagen-icon"
             />
-            <div>Solicitudes</div>
+            {/*<div>Solicitudes</div>*/}
           </div>
 
           <div className="chat-asidebar-item-icon">
@@ -34,11 +34,14 @@ function Asidebar() {
               src="./image/icons-chat/delete.png"
               className="chat-asidebar-imagen-icon"
             />
-            <div>Archivar</div>
+            {/*<div>Archivar</div>*/}
           </div>
         </div>
 
-        <div className="chat-asidebar-layout-segundos">
+        <div
+          className="chat-asidebar-layout-segundos"
+          style={{ width: "50px" }}
+        >
           <div className="chat-asidebar-imagen-icon-perfil">
             <div className="chat-asidebar-rounde-image">
               <img
@@ -47,7 +50,7 @@ function Asidebar() {
                 className="chat-asidebar-imagen-perfil"
               />
             </div>
-            <div className="text-center">Valentina</div>
+            {/*<div className="text-center">Valentina</div>*/}
           </div>
 
           <div className="chat-asidebar-imagen-icon-desplasar">

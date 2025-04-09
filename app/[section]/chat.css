@@ -1,31 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
 /*DANDOLE LAYOUT AL DIV PRINCIPAL QUE CONTIENE PRACTICAMENTE TODO IMPORTANT!*/
 
 .chat-layout {
-  @apply h-screen flex flex-row justify-center;
+  @apply h-screen flex flex-row justify-center bg-gray-200;
 }
 
 /*DANDO LAYOUT ALOS ITEMS IMPORTAN!*/
 
 .chat-layout-items {
-  @apply /*bg-slate-400*/ flex-row max-w-7xl pb-2;
+  @apply /*bg-slate-400*/ flex flex-row gap-2 max-w-[2528px] pb-2 bg-slate-200;
 }
+
+/*------------------------------------------------------------------------------------*/
 
 /*DANDOLE LAYOUT AL ASIDEBAR IMPORTANT!*/
 
 .chat-asidebar-item {
-  @apply /*bg-slate-500*/ px-4 flex flex-col  h-full justify-between;
+  @apply /*bg-slate-500*/ px-4 flex flex-col max-w-60  h-full justify-between bg-slate-200;
 }
 
 /* layout iconos de chat dela isquierdad primeros*/
 
 .chat-asidebar-layout-primeros {
-  @apply mt-5 flex flex-col items-start;
+  @apply mt-5 flex flex-col items-start text-center font-sans font-medium text-base;
 }
 
 /*dandole estilo al div papa de img de primeros icons, dandole medidas y centrando la imagen*/
 
 .chat-asidebar-item-icon {
-  @apply hover:bg-neutral-300 gap-2 flex flex-row w-full px-1 py-2 justify-start items-center rounded-lg my-[0.5px] cursor-pointer;
+  @apply hover:bg-neutral-300 gap-2 flex flex-row w-full px-1 py-2  justify-start items-center rounded-lg my-[0.5px] cursor-pointer;
 }
 
 /*imagenes de de div delos primeros icons */
@@ -34,16 +40,26 @@
   @apply w-5 h-5;
 }
 
+.chat-asidebar-imagen-icon {
+  transition: filter;
+}
+
+.chat-asidebar-item-icon:hover .chat-asidebar-imagen-icon {
+  filter: brightness(0) saturate(100%);
+}
+
 /*dandole estilo al div papa de img de segundos icons, dandole medidas y centrando la imagen*/
 
+/*---aplicando propieda  flex y w cuando el usuario leda click en deslizar w-60 flex-row/col---*/
+
 .chat-asidebar-layout-segundos {
-  @apply flex flex-row justify-between items-center gap-2 w-96;
+  @apply flex flex-col justify-between items-center w-60;
 }
 
 /*dando estilo ala img de perfil de icon, del  segundo div de icons de asidebar*/
 
 .chat-asidebar-imagen-icon-perfil {
-  @apply flex flex-row items-center gap-3  px-1 py-2 hover:bg-neutral-200 cursor-pointer rounded-lg w-full;
+  @apply flex flex-row justify-center items-center gap-2 w-full hover:bg-neutral-200 cursor-pointer rounded-lg;
 }
 
 /*redondeando la imagen del asidebar*/
@@ -63,4 +79,87 @@
 
 .chat-asidebar-imagen-desplasar {
   @apply w-5 h-5;
+}
+
+/*------------------------------------------------------------------------------------*/
+
+/*DANDOLE LAYOUT AL CHAT IMPORTANT!*/
+
+.chat-chat-item {
+  @apply bg-white min-w-[300px] max-w-[410px] basis-[410px] flex-shrink rounded-lg flex flex-col gap-3  px-2 overflow-x-hidden mt-5;
+}
+
+/*Organizando el primer div papa de chat*/
+
+.chat-chat-primer-papa {
+  @apply flex flex-row justify-between mt-2;
+}
+
+/*dando estilo al icon o imagen editar de chat*/
+
+.chat-chat-item-icon-editar {
+  @apply flex flex-row rounded-full justify-center items-center hover:bg-neutral-200 w-9 h-9 cursor-pointer;
+}
+
+.chat-chat-imagen-editar {
+  @apply w-5 h-5;
+}
+
+/*Dando estilo al titulo de chat*/
+
+.chat-chat-titulo {
+  @apply font-bold text-2xl flex flex-row justify-center items-center;
+}
+
+/*organizando el segundo div papa*/
+
+.chat-chat-segundo-papa {
+  @apply flex flex-row  gap-2 w-full;
+}
+
+/*dandolayou al lup ay input y redondeando*/
+
+.chat-chat-layout-lupaYtexto {
+  @apply flex flex-row gap-3 bg-slate-200 rounded-full w-full p-2;
+}
+
+/*img lupa*/
+
+.chat-chat-item-icon-lupa {
+  @apply w-6 h-6 ml-1 flex flex-row justify-center items-center;
+}
+
+.chat-chat-imagen-lupa {
+  @apply h-5 w-5;
+}
+
+.chat-chat-imagen-lupa {
+  filter: brightness(10) invert(50%);
+}
+
+/*img flecha*/
+
+.chat-chat-item-icon-flecha {
+  @apply flex flex-row rounded-full justify-center items-center hover:bg-neutral-200 w-11 h-9  cursor-pointer;
+}
+
+.chat-chat-imagen-flecha {
+  @apply h-5 w-5;
+}
+
+/*input chat*/
+
+.chat-chat-input {
+  @apply placeholder-slate-700 bg-transparent  border-none outline-none text-slate-900 w-full mr-1;
+}
+
+/*------------------------------------------------------------------------------------*/
+.chat-entorno-item {
+  @apply mt-5 bg-white shrink grow;
+}
+
+.experimental {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
