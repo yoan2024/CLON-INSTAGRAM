@@ -15,6 +15,8 @@ export default {
           "Arial",
           "sans-serif",
         ],
+
+        orbitron: ["var(--font-orbitron)", "sans-serif"],
       },
 
       colors: {

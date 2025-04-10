@@ -1,0 +1,37 @@
+/*DANDOLE LAYOUT AL DIV PRINCIPAL IMPORTANT!*/
+
+.login-up-layout-principal {
+  @apply w-screen h-screen   flex flex-row justify-center  items-center bg-black;
+}
+
+/*DANDOLE LAYOUT ALOS ITEMS DEL DIV PRINCIPAL IMPORTANT!*/
+
+.login-up-container {
+  @apply flex flex-row max-md:flex-col gap-8 justify-between max-md:justify-center items-center lg:w-full lg:h-full max-w-[1279px] relative;
+}
+
+/*dandole diseño ala marca Meeqo*/
+
+.login-up-marca {
+  @apply flex flex-row shrink grow md:w-full  justify-center items-center;
+}
+
+.login-up-meeqo {
+  @apply text-[160px] max-md:text-[120px] max-lg:text-[130px] max-xl:text-[140px] font-orbitron font-bold;
+}
+
+.login-up-marca {
+  filter: brightness(0) invert(100%);
+}
+
+/*dandole diseño y layout al div donde esta el contenido del formulario*/
+
+.login-up-formulario {
+  @apply flex flex-col ml-12  md:w-full;
+}
+
+/*dando estilo alos inputs*/
+
+.item-input-sign-up {
+  @apply w-11/12 text-white outline-none border-none bg-none;
+}
