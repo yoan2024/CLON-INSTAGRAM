@@ -8,7 +8,7 @@ function page() {
       <ParticlesBg />
       <div className="login-up-container">
         <div className="login-up-marca">
-          <span className="login-up-meeqo">Meeqo</span>{" "}
+          <span className="login-up-meeqo">LOGIN-UP</span>{" "}
         </div>
         <div className="login-up-formulario">
           <div className="text-center text-white p-6">

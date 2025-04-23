@@ -6,6 +6,8 @@ import { z } from "zod";
 import { Form } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import FielInput from "./FieldInput";
+import { json } from "stream/consumers";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   username: z.string().min(5),
@@ -15,6 +17,7 @@ const formSchema = z.object({
 });
 
 const Formulario = () => {
+  const router = useRouter();
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -27,8 +30,10 @@ const Formulario = () => {
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    router.push("/chat-entorno");
+
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
   }
@@ -54,7 +59,9 @@ const Formulario = () => {
           placeholder="Contraseña"
           type="password"
         />
-        <Button>Enviar</Button>
+        <Button className="text-white border-2 border-solid border-white h-fit mt-3">
+          Enviar
+        </Button>
       </form>
     </Form>
   );

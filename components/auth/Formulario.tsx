@@ -1,5 +1,5 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -16,6 +16,12 @@ const formSchema = z.object({
 });
 
 const Formulario = () => {
+  const route = useRouter();
+
+  const handleclick = () => {
+    route.push("/login-up");
+  };
+
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -28,7 +34,8 @@ const Formulario = () => {
 
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    route.push("/chat-entorno");
+
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
   }
@@ -57,7 +64,12 @@ const Formulario = () => {
             <Button type="submit" className="item-form-botton-home">
               Iniciar sesion
             </Button>
-            <p className="item-form-parrafo-home">¿Olvidaste tu contraseña?</p>
+            <p
+              className="item-form-parrafo-home cursor-pointer"
+              onClick={handleclick}
+            >
+              Resgistrarse
+            </p>
           </div>
 
           <CheckedInput

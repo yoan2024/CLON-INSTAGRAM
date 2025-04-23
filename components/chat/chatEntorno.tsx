@@ -49,24 +49,7 @@ function ChatEntorno() {
         </div>
       </div>
       <div className="chat-entorno-layout-conversacion">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos nam
-        dolores, veniam nisi officia optio sit, aliquid consectetur, nemo porro
-        mollitia quasi! Repudiandae cupiditate corporis incidunt molestiae
-        eligendi, reiciendis nulla! Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Voluptates aliquam nihil voluptatibus quo. Odit,
-        soluta temporibus id aperiam quisquam voluptatibus modi iusto porro quam
-        dolores placeat necessitatibus, suscipit laborum odio! Lorem ipsum dolor
-        sit, amet consectetur adipisicing elit. Sunt nihil tempore hic fugiat
-        nemo, eveniet odit consectetur. Totam ex placeat saepe est nam. Nulla
-        commodi, magni minima tenetur accusamus impedit! Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Nihil quae beatae eligendi impedit
-        quia officia illum ducimus vero eius. Do praesentium dicta corporis
-        iste. Temporibus repudiandae vitae excepturi ipsum minima quas eum quis
-        hic itaque eaque nihil, beatae deleniti dolorem aut iure maiores totam
-        illo dignissimos. Voluptate! In eligendi officia, placeat exercitationem
-        numquam animi quos adipisci ipsam dolor minima labore velit earum beatae
-        ducimus magni veritatis? Odit nemo numquam voluptatum natus eos
-        aspernatur cupiditate autem commodi non.<p>{texto} </p>
+        <p>{texto} </p>
       </div>
 
       {/*---------------------*/}
